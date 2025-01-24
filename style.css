@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Gochi+Hand&display=swap');
+
+:root {
+  --map-of-the-soul-persona-1: #f688a1;
+  --map-of-the-soul-7-1: #243072;
+  --love-yourself-answer-1: #99bde7;
+  --love-yourself-tear-1: #13161e;
+  --love-yourself-her-1: #eef3fc;
+  --you-never-walk-alone-1: #8bd1c4;
+  --color-map-of-the-soul-7-title-1: #000000;
+  --color-map-of-the-soul-7-sub-title-1: #000000;
+  --color-map-of-the-soul-persona-title-1: #FFFFFF;
+  --color-map-of-the-soul-persona-sub-title-1: #a33267;
+  --color-love-yourself-answer-title-1: #FFFFFF;
+  --color-love-yourself-answer-sub-title-1: #4b6897;
+  --color-love-yourself-tear-title-1: #FFFFFF;
+  --color-love-yourself-tear-sub-title-1: #798ab6;
+  --color-love-yourself-her-title-1: #5d5d7a;
+  --color-love-yourself-her-sub-title-1: #608db1;
+  --color-you-never-walk-alone-title-1: #FFFFFF;
+  --color-you-never-walk-alone-sub-title-1: #ff5d51;
+}
+
+h1 {
+    font-family: Caveat Brush
+  }
+  
+  /* CARD */
+.card {
+    background-color: transparent;
+    border: 40;
+    cursor: pointer;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1rem;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .card-back h3 {
+    font-family: 'Caveat Brush', cursive;
+  }
+  
+  .card-back p {
+    font-family: 'Gochi Hand', sans-serif;
+    font-size: 24px;
+  }
+  
+  /* Styles for specific albums */
+  .map-of-the-soul-7 .card-back {
+    background-color: var(--map-of-the-soul-7-1);
+  }
+  
+  .map-of-the-soul-7 .card-back h3 {
+    color: var(--color-map-of-the-soul-7-title-1);
+  }
+  
+  .map-of-the-soul-7 .card-back p {
+    color: var(--color-map-of-the-soul-7-sub-title-1);
+  }
+  

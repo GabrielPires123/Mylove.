@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            padding: 3rem;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .card {
+            background-color: transparent;
+            border: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 1rem;
+            perspective: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card img {
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .card-back h3 {
+            font-family: 'Caveat Brush', cursive;
+        }
+        .card-back p {
+            font-family: 'Gochi Hand', sans-serif;
+            font-size: 24px;
+        }
+        @media (min-width: 768px) {
+            .card {
+                width: 48%;
+            }
+        }
+        @media (min-width: 992px) {
+            .card {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="display-1 text-center">Nossos momentos! <3 </h1>
+        <div class="row">
+            <div class="card map-of-the-soul-7">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="https://ibighit.com/bts/images/bts/discography/map_of_the_soul-7/img01.jpg" class="card-img-top" alt="MAP OF THE SOUL: 7 Cover">
+                    </div>
+                    <div class="card-back d-flex justify-content-center align-items-center">
+                        <div class="text-center">
+                            <h3>MAP OF THE SOUL: 7</h3>
+                            <p>4TH FULL-LENGTH ALBUM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repita para os outros cards -->
+            <div class="card map-of-the-soul-7">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="DSC01429.JPG" class="card-img-top" alt="MAP OF THE SOUL: 7 Cover">
+                    </div>
+                    <div class="card-back d-flex justify-content-center align-items-center">
+                        <div class="text-center">
+                            <h3>MAP OF THE SOUL: 7</h3>
+                            <p>4TH FULL-LENGTH ALBUM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
